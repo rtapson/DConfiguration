@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{34AD809A-ACE9-4B6C-A8D0-395CB5CAB8B5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DConfigTest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tests\DConfigTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DConfigTest">
+        <MSBuild Projects="DConfigTest.dproj"/>
+    </Target>
+    <Target Name="DConfigTest:Clean">
+        <MSBuild Projects="DConfigTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DConfigTest:Make">
+        <MSBuild Projects="DConfigTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DConfigTests">
+        <MSBuild Projects="Tests\DConfigTests.dproj"/>
+    </Target>
+    <Target Name="DConfigTests:Clean">
+        <MSBuild Projects="Tests\DConfigTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DConfigTests:Make">
+        <MSBuild Projects="Tests\DConfigTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DConfigTest;DConfigTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DConfigTest:Clean;DConfigTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DConfigTest:Make;DConfigTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
