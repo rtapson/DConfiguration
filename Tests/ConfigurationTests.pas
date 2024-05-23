@@ -8,58 +8,45 @@ uses
 
 type
   [TestFixture]
-  TConfigurationTest = class
+  TConfigurationTests = class
   private
-    FConfigurationManager: IConfigurationManager;
-
     [Setup]
     procedure Setup;
 
     [TearDown]
     procedure TearDown;
   public
-
-
-    // Sample Methods
-    // Simple single Test
     [Test]
-    procedure TestConfigurationManagerCreate;
+    procedure TestConfigurationCreate;
 
-
-    // Test with TestCase Attribute to supply parameters.
-    [Test]
-    [TestCase('TestA','1,2')]
-    [TestCase('TestB','3,4')]
-    procedure Test2(const AValue1 : Integer;const AValue2 : Integer);
   end;
 
 implementation
 
 uses
-  ConfigurationManager;
+  Configuration;
 
-procedure TConfigurationTest.Setup;
+{ TConfigurationTests }
+
+procedure TConfigurationTests.Setup;
 begin
 
 end;
 
-procedure TConfigurationTest.TearDown;
+procedure TConfigurationTests.TearDown;
 begin
+
 end;
 
-procedure TConfigurationTest.TestConfigurationManagerCreate;
+procedure TConfigurationTests.TestConfigurationCreate;
 var
-  ConfigurationManager: IConfigurationManager;
+  Configuration: IConfiguration;
 begin
-  ConfigurationManager := TConfigurationManager.Create;
-  Assert.IsTrue(Assigned(ConfigurationManager));
-end;
 
-procedure TConfigurationTest.Test2(const AValue1 : Integer;const AValue2 : Integer);
-begin
 end;
 
 initialization
-  TDUnitX.RegisterTestFixture(TConfigurationTest);
+  TDUnitX.RegisterTestFixture(TConfigurationTests);
+
 
 end.

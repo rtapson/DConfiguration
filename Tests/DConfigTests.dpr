@@ -13,9 +13,11 @@ uses
   DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-  ConfigurationTests in 'ConfigurationTests.pas',
+  ConfigurationManagerTests in 'ConfigurationManagerTests.pas',
   ConfigurationIntf in '..\src\ConfigurationIntf.pas',
-  ConfigurationManager in '..\src\ConfigurationManager.pas';
+  ConfigurationManager in '..\src\ConfigurationManager.pas',
+  Configuration in '..\src\Configuration.pas',
+  ConfigurationTests in 'ConfigurationTests.pas';
 
 { keep comment here to protect the following conditional from being removed by the IDE when adding a unit }
 {$IFNDEF TESTINSIGHT}

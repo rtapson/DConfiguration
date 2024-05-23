@@ -9,15 +9,28 @@ type
   TNameValueCollection = TDictionary<string, string>;
 
   ConfigurationUserLevel = (None = 0, PerUserRoaming = 10, PerUserRoamingAndLocal = 20);
+  ConfigurationSaveMode = (Modified, Minimal, Full);
 
   IConfigurationElement = interface
     ['{20FA78CF-63A8-4AF8-BE5F-DA4DDD729761}']
 
+  end;
 
+  IConfigurationSection = interface
+    ['{E29DBF80-F5D6-402E-9495-40D47AE7AAD9}']
+  end;
+
+  IConfigurationSectionGroup = interface
+    ['{4AEE7112-4FD6-4A22-B340-EC2F6DA00896}']
   end;
 
   IConfiguration = interface
     ['{1DB854C4-3686-47E5-8055-72D1B1D7CA4F}']
+    function GetSection(const SectionName: string): IConfigurationSection;
+    function GetSectionGroup(const SectionGroupName: string): IConfigurationSectionGroup;
+    procedure Save; overload;
+    procedure Save(const SaveMode: ConfigurationSaveMode); overload;
+    procedure Save(const SaveMode: ConfigurationSaveMode; const ForceSaveAll: Boolean); overload;
   end;
 
 

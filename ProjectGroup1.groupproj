@@ -3,7 +3,7 @@
         <ProjectGuid>{34AD809A-ACE9-4B6C-A8D0-395CB5CAB8B5}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="DConfigTest.dproj">
+        <Projects Include="DConfig.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="Tests\DConfigTests.dproj">
@@ -17,14 +17,14 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="DConfigTest">
-        <MSBuild Projects="DConfigTest.dproj"/>
+    <Target Name="DConfig">
+        <MSBuild Projects="DConfig.dproj"/>
     </Target>
-    <Target Name="DConfigTest:Clean">
-        <MSBuild Projects="DConfigTest.dproj" Targets="Clean"/>
+    <Target Name="DConfig:Clean">
+        <MSBuild Projects="DConfig.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="DConfigTest:Make">
-        <MSBuild Projects="DConfigTest.dproj" Targets="Make"/>
+    <Target Name="DConfig:Make">
+        <MSBuild Projects="DConfig.dproj" Targets="Make"/>
     </Target>
     <Target Name="DConfigTests">
         <MSBuild Projects="Tests\DConfigTests.dproj"/>
@@ -36,13 +36,13 @@
         <MSBuild Projects="Tests\DConfigTests.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DConfigTest;DConfigTests"/>
+        <CallTarget Targets="DConfig;DConfigTests"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DConfigTest:Clean;DConfigTests:Clean"/>
+        <CallTarget Targets="DConfig:Clean;DConfigTests:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DConfigTest:Make;DConfigTests:Make"/>
+        <CallTarget Targets="DConfig:Make;DConfigTests:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

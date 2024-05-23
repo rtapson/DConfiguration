@@ -1,4 +1,4 @@
-program DConfigTest;
+program DConfig;
 
 {$APPTYPE CONSOLE}
 

@@ -1,15 +1,15 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{F11DD553-0412-4593-9DCD-4363C4652577}</ProjectGuid>
+        <ProjectGuid>{5EA8C216-3DBD-499F-8DF2-5543EC474E82}</ProjectGuid>
         <ProjectVersion>20.1</ProjectVersion>
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectName Condition="'$(ProjectName)'==''">DConfigTests</ProjectName>
+        <ProjectName Condition="'$(ProjectName)'==''">DConfig</ProjectName>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Console</AppType>
-        <MainSource>DConfigTests.dpr</MainSource>
+        <MainSource>DConfig.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -49,11 +49,7 @@
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-        <UsingDelphiRTL>true</UsingDelphiRTL>
-        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
-        <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
-        <DCC_UnitSearchPath>$(DUnitX);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <SanitizedProjectName>DConfigTests</SanitizedProjectName>
+        <SanitizedProjectName>DConfig</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>FireDACIBDriver;vclwinx;TMSFNCGanttChartPkgDE;TMSVCLSecuritySystemPkgUI;FMXTMSFNCUIPackPkg;TMSFNCWebSocketPkgDE;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;aurelius;VCLTMSFNCDashboardPackPkg;VCLTMSFNCWebSocketPkg;FMXTMSFNCAppToolsPkg;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;VCLTMSFNCBloxPkg;dbxcds;vcledge;TMSFNCBloxPkgDE;VCLTMSFNCGanttChartPkg;TMSVCLUIPackPkgWiz;TMSVCLUIPackPkgEx;dacvcl290;FireDACSqliteDriver;DbxClientDriver;TMSScripter_IDE;soapmidas;sdacvcl290;dbexpress;TMSCloudPkgDE;TMSVCLUIPackPkg;inet;vcltouch;fmxdae;sdacfmx290;TMSmCLPkgDE;tmsbcl;CustomIPTransport;VCLTMSFNCCloudPackPkg;IndySystem;tdstream290;sdac290;TMSFNCDashBoardPackPkgDE;VCLTMSFNCChartPkg;TMSVCLIWPkg;vclFireDAC;TMSVCLIWPkgDE;FireDACCommon;TMSScripter_VCL;vacommpkg;bindcompdbx;rtl;FireDACMySQLDriver;remotedb;DBXSqliteDriver;FMXTMSFNCChartPkg;TMSVCLSecuritySystemPkgUIDE;vclimg;inetdbxpress;FireDAC;VCLTMSFNCUIPackPkg;xmlrtl;TMSFNCMapsPkgDE;dsnap;xdata;FMXTMSFNCWebSocketPkg;fmxobj;bindcompvclsmp;FMXTMSFNCMapsPkg;TMSVCLSecuritySystemPkgCore;FMXTMSFNCCorePkg;TMSScripter_Memo;TMSLogging;sparkle;FireDACCommonDriver;sphinx;IndyIPClient;TMSmCLPkg;TMSCloudPkg;FMXTMSFNCCloudPackPkg;bindcompvclwinx;bindcompfmx;TMSCryptoPkg;crcontrols290;inetdb;vclactnband;FMXTMSFNCWXPackPkg;TMSScripter;fmxFireDAC;TMSMQTTPkg;DBXMySQLDriver;VclSmp;fmxase;VCLTMSFNCWXPackPkg;TMSVCLPluginFrameworkPkgMgr;dbrtl;VCLTMSFNCAppToolsPkg;Skia.Package.FMX;TMSPassKitPkg;TMSiCLPkg;FireDACMSAccDriver;TMSPassKitPkgDE;TMSFNCCorePkgDE;vcldsnap;DBXInterBaseDriver;FMXTMSFNCGanttChartPkg;TMSFNCChartPkgDE;TMSVCLUIPackPkgXls;Skia.Package.VCL;vcldb;FMXTMSFNCDashboardPackPkg;TMSFNCCloudPackPkgDE;dacfmx290;bindcomp;AdvChart;IndyCore;RESTBackendComponents;TMSMQTTPkgDE;TMSVCLPluginFrameworkPkgCore;TMSiCLPkgDE;TMSCryptoPkgDE;FireDACADSDriver;TMSFNCWXPackPkgDE;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;TMSScripter_Legacy;dac290;FMXTMSFNCBloxPkg;AdvChartDE;FireDACPgDriver;vacommpkgde;TMSFNCUIPackPkgDE;tethering;TMSFNCAppToolsPkgDE;bindcompvcl;CloudService;VCLTMSFNCCorePkg;soaprtl;soapserver;VCLTMSFNCMapsPkg;$(DCC_UsePackage)</DCC_UsePackage>
@@ -61,9 +57,15 @@
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>FireDACIBDriver;vclwinx;TMSVCLSecuritySystemPkgUI;FMXTMSFNCUIPackPkg;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;aurelius;VCLTMSFNCDashboardPackPkg;FMXTMSFNCAppToolsPkg;appanalytics;IndyProtocols;vclx;dbxcds;vcledge;VCLTMSFNCGanttChartPkg;TMSVCLUIPackPkgEx;FireDACSqliteDriver;DbxClientDriver;TMSScripter_IDE;soapmidas;dbexpress;TMSVCLUIPackPkg;inet;vcltouch;fmxdae;tmsbcl;CustomIPTransport;VCLTMSFNCCloudPackPkg;IndySystem;VCLTMSFNCChartPkg;TMSVCLIWPkg;vclFireDAC;FireDACCommon;TMSScripter_VCL;bindcompdbx;rtl;FireDACMySQLDriver;remotedb;DBXSqliteDriver;FMXTMSFNCChartPkg;vclimg;inetdbxpress;FireDAC;VCLTMSFNCUIPackPkg;xmlrtl;dsnap;xdata;fmxobj;bindcompvclsmp;FMXTMSFNCMapsPkg;TMSVCLSecuritySystemPkgCore;FMXTMSFNCCorePkg;TMSScripter_Memo;TMSLogging;sparkle;FireDACCommonDriver;sphinx;IndyIPClient;FMXTMSFNCCloudPackPkg;bindcompvclwinx;bindcompfmx;TMSCryptoPkg;inetdb;vclactnband;TMSScripter;fmxFireDAC;DBXMySQLDriver;VclSmp;fmxase;dbrtl;VCLTMSFNCAppToolsPkg;FireDACMSAccDriver;vcldsnap;DBXInterBaseDriver;FMXTMSFNCGanttChartPkg;TMSVCLUIPackPkgXls;Skia.Package.VCL;vcldb;bindcomp;AdvChart;IndyCore;RESTBackendComponents;FireDACADSDriver;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;TMSScripter_Legacy;FireDACPgDriver;tethering;bindcompvcl;CloudService;VCLTMSFNCCorePkg;soaprtl;soapserver;VCLTMSFNCMapsPkg;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -77,11 +79,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>(None)</Manifest_File>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-        <DCC_ExeOutput>..\bin\$(Platform)\$(Config)</DCC_ExeOutput>
-        <DCC_DcuOutput>..\Units\$(Platform)\$(Config)</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -93,11 +90,6 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="ConfigurationManagerTests.pas"/>
-        <DCCReference Include="..\src\ConfigurationIntf.pas"/>
-        <DCCReference Include="..\src\ConfigurationManager.pas"/>
-        <DCCReference Include="..\src\Configuration.pas"/>
-        <DCCReference Include="ConfigurationTests.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -116,13 +108,8 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">DConfigTests.dpr</Source>
+                    <Source Name="MainSource">DConfig.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Athens\Lib\Ven\Win32\Bpl\dclRBC1215290.bpl">ReportBuilder TeeChart 9 Components</Excluded_Packages>
-                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
@@ -140,9 +127,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\bin\Win32\Debug\DConfigTests.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\DConfig.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>DConfigTests.exe</RemoteName>
+                        <RemoteName>DConfig.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
