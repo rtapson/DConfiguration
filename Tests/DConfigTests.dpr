@@ -17,7 +17,10 @@ uses
   ConfigurationIntf in '..\src\ConfigurationIntf.pas',
   ConfigurationManager in '..\src\ConfigurationManager.pas',
   Configuration in '..\src\Configuration.pas',
-  ConfigurationTests in 'ConfigurationTests.pas';
+  ConfigurationTests in 'ConfigurationTests.pas',
+  TestData in 'TestData.pas',
+  ConfigurationAttributes in '..\src\ConfigurationAttributes.pas',
+  ConfigurationAttributeTests in 'ConfigurationAttributeTests.pas';
 
 { keep comment here to protect the following conditional from being removed by the IDE when adding a unit }
 {$IFNDEF TESTINSIGHT}

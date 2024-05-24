@@ -98,6 +98,9 @@
         <DCCReference Include="..\src\ConfigurationManager.pas"/>
         <DCCReference Include="..\src\Configuration.pas"/>
         <DCCReference Include="ConfigurationTests.pas"/>
+        <DCCReference Include="TestData.pas"/>
+        <DCCReference Include="..\src\ConfigurationAttributes.pas"/>
+        <DCCReference Include="ConfigurationAttributeTests.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

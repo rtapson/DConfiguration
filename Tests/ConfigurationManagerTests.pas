@@ -28,6 +28,10 @@ type
     [TestCase('TestPerUserRoamingAndLocal', '20')]
     procedure TestConfigurationManagerOpenExeConfig(const UserLevel: Integer);
 
+    [Test]
+    [TestCase('Test', 'SectionInformationData')]
+    procedure TestConfigurationManagerOpenExeConfigByName(const Name: string);
+
 
 //    // Test with TestCase Attribute to supply parameters.
 //    [Test]
@@ -66,6 +70,14 @@ begin
   ConfigurationManager := TConfigurationManager.Create;
   Config := ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel(UserLevel));
   Assert.IsTrue(Assigned(Config));
+end;
+
+procedure TConfigurationManagerTests.TestConfigurationManagerOpenExeConfigByName(const Name: string);
+var
+  CM : IConfigurationManager;
+begin
+  CM := TConfigurationManager.Create;
+  //CM.OpenExeConfiguration()
 end;
 
 //procedure TConfigurationTest.Test2(const AValue1 : Integer;const AValue2 : Integer);

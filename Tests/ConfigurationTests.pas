@@ -42,7 +42,8 @@ procedure TConfigurationTests.TestConfigurationCreate;
 var
   Configuration: IConfiguration;
 begin
-
+  Configuration := TConfiguration.Create;
+  Assert.IsNotNull(Configuration);
 end;
 
 initialization
